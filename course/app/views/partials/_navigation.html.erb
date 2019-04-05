@@ -1,0 +1,19 @@
+<nav class="navbar navbar-inverse">
+  <ul class="nav navbar-nav">
+    <li class"col-md"><a href="#">Learn</a></li>
+    <li><a href="#">Practice</a></li>
+    <li><a href="#">Resource</a></li>
+    <% if user_signed_in?%>
+      <li class"col-md">
+        <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+      </li>
+    <%end%>
+    <li class"col-md">
+      <%= link_to "Log In", new_user_session_path %>
+    </li>
+    <li class"col-md">
+      <%= link_to "Sing Up ", new_user_registration_path %>
+      </li>
+  </ul>
+  <p class="navbar-text">Some text</p>
+</nav>
